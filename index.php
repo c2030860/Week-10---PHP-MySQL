@@ -16,29 +16,33 @@
     />
 
   </head>
-  <body>
 
-<?php
-include("includes/header.php");
-?>
+<body>
 
-    <div class="mainContainer">
-		<main>
+  <?php
+    include("includes/header.php");
+  ?>
 
-      <div class="banner">
-        <h2>Banner</h2>
-      </div>
-      
-      <section class="homePage">
-		<!-- Featured Films Here -->
-      </section>
-		</main>
+  <div class="mainContainer">
+    <main>
+
+    <div class="banner">
+      <h2>Banner</h2>
     </div>
+      
+    <section class="homePage">
+  <!-- Featured Films Here -->
+    </section>
 
-<?php
-// add Footer
-?>
+		</main>
+  </div>
 
-    <script src="js/main.js"></script>
-  </body>
+  <?php
+    // add Footer
+    include("includes/footer.php");
+  ?>
+
+  <script src="js/main.js"></script>
+
+</body>
 </html>
