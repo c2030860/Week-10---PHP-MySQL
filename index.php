@@ -1,3 +1,12 @@
+<?php
+  require_once("includes/config.php");
+  
+  $queryFilms = "SELECT * FROM Films ORDER BY releaseDate DESC LIMIT 0,4";
+  $resultFilms = $mysqli->query($queryFilms);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,7 +40,19 @@
     </div>
       
     <section class="homePage">
-  <!-- Featured Films Here -->
+      <!-- Featured Films Here -->
+      <?php
+        while($obj = $resultFilms->fetch_object()){
+          echo "<div>";
+
+          echo "<h2>{$obj->filmTitle}</h2>";
+          echo "<img src=\"images/{$obj->filmImage}\" alt=\"Cover for {$obj->filmTitle}\">";
+          echo "<p>{$obj->filmDescription}</p>";
+
+          echo "</div>";
+        }
+      ?>
+
     </section>
 
 		</main>
